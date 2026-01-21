@@ -2,7 +2,13 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Gauge, Calendar, MapPin, Fuel, Settings2 } from "lucide-react";
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 import {
   AlertDialog,
@@ -24,7 +30,7 @@ export interface Car {
   price: number;
   mileage: number;
   location: string;
-  image: string;
+  images: string[];
   description: string;
   condition: "Excellent" | "Good" | "Fair";
   fuelType: "Petrol" | "Diesel" | "Electric" | "Hybrid";
@@ -41,12 +47,40 @@ interface CarCardProps {
 export function CarCard({ car, onEdit, onDelete, isAdminView }: CarCardProps) {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-      <div className="aspect-video overflow-hidden bg-gray-100">
-        <img
-          src={car.image}
-          alt={`${car.year} ${car.make} ${car.model}`}
-          className="w-full h-full object-cover"
-        />
+      <div className="aspect-video overflow-hidden bg-gray-100 relative group">
+        <Carousel className="w-full h-full">
+          <CarouselContent>
+            {car.images && car.images.length > 0 ? (
+              car.images.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="aspect-video w-full h-full">
+                    <img
+                      src={image}
+                      alt={`${car.year} ${car.make} ${car.model} - Image ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              ))
+            ) : (
+              <CarouselItem>
+                <div className="flex items-center justify-center w-full h-full bg-gray-200 text-gray-400">
+                  No Image
+                </div>
+              </CarouselItem>
+            )}
+          </CarouselContent>
+          {car.images && car.images.length > 1 && (
+            <>
+              <div className="absolute left-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <CarouselPrevious className="static translate-y-0" />
+              </div>
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <CarouselNext className="static translate-y-0" />
+              </div>
+            </>
+          )}
+        </Carousel>
       </div>
       <CardContent className="p-4">
         <div className="flex justify-between items-start mb-2">

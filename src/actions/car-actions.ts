@@ -32,7 +32,7 @@ export async function addCar(data: Omit<Car, "id">) {
                 price: data.price,
                 mileage: data.mileage,
                 location: data.location,
-                image: data.image,
+                images: data.images,
                 description: data.description,
                 condition: data.condition,
                 fuelType: data.fuelType, // Optional in interface? Check schema.
@@ -60,7 +60,7 @@ export async function updateCar(data: Car) {
                 price: data.price,
                 mileage: data.mileage,
                 location: data.location,
-                image: data.image,
+                images: data.images,
                 description: data.description,
                 condition: data.condition,
                 fuelType: data.fuelType,

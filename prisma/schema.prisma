@@ -19,7 +19,7 @@ model Car {
   price        Float
   mileage      Int
   location     String
-  image        String
+  images       String[]
   description  String
   condition    String
   fuelType     String
