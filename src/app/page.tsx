@@ -55,7 +55,7 @@ export default function Home() {
                             <Link href="/sell" className="hover:text-blue-600 transition-colors">Sell</Link>
                             <Link href="/finance" className="hover:text-blue-600 transition-colors">Finance</Link>
                             <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact Us</Link>
-                            <Link href="/admin" className="hover:text-blue-600 transition-colors">Admin Panel</Link>
+                            <Link href="/admin" className="hover:text-blue-600 transition-colors hidden md:inline">Admin Panel</Link>
                         </div>
                     </div>
                 </div>
