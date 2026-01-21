@@ -43,7 +43,8 @@ export async function addCar(data: Omit<Car, "id">) {
         revalidatePath("/admin");
         return car;
     } catch (error) {
-        console.error("Error adding car:", error);
+        console.error("Error adding car:", JSON.stringify(error, null, 2));
+        console.error("Input data:", JSON.stringify(data, null, 2));
         throw new Error("Failed to add car");
     }
 }
