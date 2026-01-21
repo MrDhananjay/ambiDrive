@@ -1,0 +1,65 @@
+{
+  "node": {
+    "0017511a71895d6329809a9ae7ec32aa2f794887be": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/car-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getCars",
+          "filename": "src/actions/car-actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "action-browser"
+      },
+      "exportedName": "getCars",
+      "filename": "src/actions/car-actions.ts"
+    },
+    "40596599cb5247c6650768dff3f211b8f6aaa0b4a6": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/car-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "addCar",
+          "filename": "src/actions/car-actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "action-browser"
+      },
+      "exportedName": "addCar",
+      "filename": "src/actions/car-actions.ts"
+    },
+    "404ab6ac62188fbb77ac5e34b0244552dc1337491e": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/car-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateCar",
+          "filename": "src/actions/car-actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "action-browser"
+      },
+      "exportedName": "updateCar",
+      "filename": "src/actions/car-actions.ts"
+    },
+    "408c099e3c2ade399fac79e9d8f59ca1f3f54d5309": {
+      "workers": {
+        "app/admin/page": {
+          "moduleId": "[project]/.next-internal/server/app/admin/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/actions/car-actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteCar",
+          "filename": "src/actions/car-actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/page": "action-browser"
+      },
+      "exportedName": "deleteCar",
+      "filename": "src/actions/car-actions.ts"
+    }
+  },
+  "edge": {}
+}
