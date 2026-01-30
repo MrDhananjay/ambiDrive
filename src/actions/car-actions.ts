@@ -22,6 +22,18 @@ export async function getCars() {
     }
 }
 
+export async function getCarById(id: string) {
+    try {
+        const car = await prisma.car.findUnique({
+            where: { id },
+        });
+        return car;
+    } catch (error) {
+        console.error(`Error fetching car with ID ${id}:`, error);
+        return null;
+    }
+}
+
 export async function addCar(data: Omit<Car, "id">) {
     try {
         const car = await prisma.car.create({

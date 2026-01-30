@@ -1,7 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { CarIcon } from "lucide-react";
+import { Navbar } from "@/components/navbar";
 import { CarListings } from "@/components/car-listings";
 import { CarFilters, FilterState } from "@/components/car-filters";
 import { useCarContext } from "@/context/CarContext";
@@ -43,22 +42,7 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-gray-50 flex flex-col">
-            {/* Header */}
-            <nav className="sticky top-0 z-50 bg-white shadow-sm border-b">
-                <div className="max-w-7xl mx-auto px-6 py-4">
-                    <div className="flex justify-between items-center">
-                        <Link href="/" className="flex items-center gap-2">
-                            <CarIcon className="size-8 text-blue-600" />
-                            <span className="text-2xl font-bold">AmbiDrive</span>
-                        </Link>
-                        <div className="flex gap-6 text-sm font-medium">
-                            <Link href="/sell" className="hover:text-blue-600 transition-colors">Sell</Link>
-                            <Link href="/finance" className="hover:text-blue-600 transition-colors">Finance</Link>
-                            <Link href="/contact" className="hover:text-blue-600 transition-colors">Contact Us</Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* Main Content */}
             <main className="flex-1 max-w-7xl mx-auto px-6 py-8 w-full">

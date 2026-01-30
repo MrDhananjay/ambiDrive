@@ -1,6 +1,7 @@
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { Gauge, Calendar, MapPin, Fuel, Settings2 } from "lucide-react";
 import {
   Carousel,
@@ -33,7 +34,7 @@ export interface Car {
   images: string[];
   description: string;
   condition: "Excellent" | "Good" | "Fair";
-  fuelType: "Petrol" | "Diesel" | "Electric" | "Hybrid";
+  fuelType: "Petrol" | "Diesel" | "Electric" | "Hybrid" | "CNG";
   transmission: "Manual" | "Automatic" | "Semi-Automatic";
 }
 
@@ -156,7 +157,9 @@ export function CarCard({ car, onEdit, onDelete, isAdminView }: CarCardProps) {
 
       {!isAdminView && (
         <CardFooter className="p-4 pt-0">
-          <Button className="w-full">View Details</Button>
+          <Link href={`/cars/${car.id}`} className="w-full">
+            <Button className="w-full">View Details</Button>
+          </Link>
         </CardFooter>
       )}
     </Card>

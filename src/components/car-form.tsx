@@ -200,6 +200,7 @@ export function CarForm({ car, onSubmit, onCancel }: CarFormProps) {
               <SelectItem value="Diesel">Diesel</SelectItem>
               <SelectItem value="Electric">Electric</SelectItem>
               <SelectItem value="Hybrid">Hybrid</SelectItem>
+              <SelectItem value="CNG">CNG</SelectItem>
             </SelectContent>
           </Select>
         </div>

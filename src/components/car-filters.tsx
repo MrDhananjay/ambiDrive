@@ -81,7 +81,7 @@ export function CarFilters({ onFilterChange }: CarFiltersProps) {
             <div>
                 <h3 className="font-semibold mb-3">Fuel Type</h3>
                 <div className="space-y-2">
-                    {["Petrol", "Diesel", "Electric", "Hybrid"].map((type) => (
+                    {["Petrol", "Diesel", "Electric", "Hybrid", "CNG"].map((type) => (
                         <div key={type} className="flex items-center space-x-2">
                             <Checkbox
                                 id={`fuel-${type}`}

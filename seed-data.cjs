@@ -83,6 +83,20 @@ const initialCars = [
         fuelType: "Electric",
         transmission: "Automatic",
     },
+    {
+        id: "6",
+        make: "Maruti Suzuki",
+        model: "Ertiga",
+        year: 2024,
+        price: 1200000,
+        mileage: 5000,
+        location: "Delhi, DL",
+        image: "https://images.unsplash.com/photo-1698224534011-82d2571216a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBjYXJ8ZW58MXx8fHwxNzY4OTczNjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        description: "Modern 7-seater MUV with factory-fitted S-CNG technology for maximum efficiency and low running costs.",
+        condition: "Excellent",
+        fuelType: "CNG",
+        transmission: "Manual",
+    },
 ];
 
 const client = new Client(config);
